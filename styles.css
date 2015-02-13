@@ -78,23 +78,17 @@ p {
   float: right;
 }
 
-#movie img {
+#movieMedia {
   width: auto;
   height: 90%;
 }
 
-#music {
-
-}
-
-#gif img {
+#gifMedia img {
   width: auto;
-
 }
 
 .hide {
 	display: none;
-  background-color: white;
 }
 
 footer {
@@ -146,6 +140,45 @@ footer a {
 }
 
 @media (max-width: 500px) {
-  
+  .container {
+    max-width: 800px;
+    height: 900px;
+    margin: 0 auto;
+    background: rgb(230, 230, 230);
+    border: 3px solid #001717;
+    border-radius: 2px;
+  }
+  .about_me {
+    width: 100%;
+    height: 250px;
+    float: left;
+  }
+  .curriculum {
+    width: 100%;
+    height: 210px;
+    float: left;
+  }
+  .last_thing {
+    width: 100%;
+    height: 440px;
+    float: left;
+  }
+  .last_dropdown {
+    font-size: 17px;
+    width: 100%;
+    height: 50px;
+    float: left;
+    margin-top: 15px;
+  }
+  .last_container {
+    width: 100%;
+    height: 300px;
+    float: left;
+    margin-top: 30px;
+  }
+  iframe {
+    width: 360px;
+    height: 200px;
+  }
 }
 

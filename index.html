@@ -12,8 +12,6 @@
   <!-- My CSS -->
   <link rel="stylesheet" href="styles.css" type="text/css">
 
-  
-  
 </head>
 <body>
   <!-- Opaque container -->
@@ -48,17 +46,17 @@
         <h3 id="lastThing">Some things I like</h3>
         <div class="last_dropdown">
           <h3>Check out the last:</h3>
-          <select id="lastDropdown">
-            <option value="select">Select one</option>
-            <option value="movie">Movie I saw</option>
-            <option value="song">Song I heard</option>
-            <option value="gif">GIF I enjoyed</option>
-          </select>
+          <div id="lastDropdown">
+            <button onclick="hey(this)" value="movie" id="movie">Movie I saw</button>
+            <button onclick="hey(this)" value="song" id="song">Song I heard</button>
+            <button onclick="hey(this)" value="gif" id="gif">GIF I enjoyed</button>
+          </div>
         </div>
-        <div class="last_container">
-          <div class="movie hide"><img id="movie" height="100%" width="auto" src="images/movie.jpg" alt="Birdman"></div>
-          <div id="song" class="hide"><iframe width="370" height="210" src="https://www.youtube.com/embed/_NnO5e-K5Q8" frameborder="0" allowfullscreen></iframe></iframe></div>
-          <div class="gif hide"><img id="gif" height="80%" width="auto" src="images/favgif.gif" alt="GIF"></div>
+
+        <div id="lastContainer" class="last_container">
+          <div id="movieMedia" class="hide"><img class="movie" height="100%" width="auto" src="images/movie.jpg" alt="Birdman"></div>
+          <div id="songMedia" class="hide"><iframe width="370" height="210" src="https://www.youtube.com/embed/_NnO5e-K5Q8" frameborder="0" allowfullscreen></iframe></iframe></div>
+          <div id="gifMedia" class="hide"><img class="gif" height="80%" width="auto" src="images/favgif.gif" alt="GIF"></div>
         </div>
       </div>
     </div>
@@ -72,15 +70,23 @@
   </footer>
     
   <script>
-    var i = document.getElementById("lastDropdown").
-    for (i = 0; i >= ; i--) {
-      Things[i]
+    function hey(elem) {
+      if(elem.id === "movie") {
+        document.getElementById("movieMedia").className = document.getElementById("movieMedia").className.replace( /(?:^|\s)hide(?!\S)/g , ' ' );
+        document.getElementById("songMedia").className += " hide";
+        document.getElementById("gifMedia").className += " hide";
+        // document.getElementById("gifMedia").className += "hide";
+      } else if (elem.id === "song") {
+        document.getElementById("songMedia").className = document.getElementById("songMedia").className.replace( /(?:^|\s)hide(?!\S)/g , ' ' );
+        document.getElementById("movieMedia").className += " hide";
+        document.getElementById("gifMedia").className += " hide";
+      } else if (elem.id === "gif"){
+        document.getElementById("gifMedia").className = document.getElementById("gifMedia").className.replace( /(?:^|\s)hide(?!\S)/g , ' ' );
+        document.getElementById("movieMedia").className += " hide";
+        document.getElementById("songMedia").className += " hide";
+      };
     };
-    if {
-
-    }
-
-    div.classList.
   </script>
+
 </body>
 </html>
